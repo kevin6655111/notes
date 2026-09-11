@@ -157,7 +157,7 @@ git push -uf origin main                  # 同上
 > - `origin` 是遠端儲存庫的名稱，`main` 是分支的名稱。
 > - 設定 upstream 後，後續推送/拉取只需使用 `git push` / `git pull`。
 
-![Git 工作目錄、暫存區、本地與遠端儲存庫之間的指令流程](images/git-workflow.png)
+![Git 工作目錄、暫存區、本地與遠端儲存庫之間的指令流程](https://raw.githubusercontent.com/kevin6655111/notes/main/images/git-workflow.png)
 <!-- 原圖：https://hackmd.io/_uploads/rJuw49EP3.png -->
 
 ---
@@ -733,7 +733,7 @@ git update-ref refs/<newRef> <object_id>  # 建立新的參照名稱對應 HashI
 | `HEAD~2^2` | 往上兩代後，取其第二個父提交 |
 
 <p align="center">
-  <img src="images/git-caret-tilde.png" alt="相對名稱表示法 ^ 與 ~ 的差異">
+  <img src="https://raw.githubusercontent.com/kevin6655111/notes/main/images/git-caret-tilde.png" alt="相對名稱表示法 ^ 與 ~ 的差異">
   <!-- 原圖：https://hackmd.io/_uploads/BkgawEuv3.png -->
   <br>
   相對名稱表示法 ^ 與 ~ 的差異

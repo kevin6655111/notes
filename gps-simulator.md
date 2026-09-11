@@ -43,10 +43,10 @@ source .env_mingw64/bin/activate         # 進入虛擬環境
 python src/main.py -p COM2               # -p 指定要監聽的 COM port
 ```
 
-![安裝與執行步驟的指令歷程](images/gps-setup-history.png)
+![安裝與執行步驟的指令歷程](https://raw.githubusercontent.com/kevin6655111/notes/main/images/gps-setup-history.png)
 <!-- 原圖：https://hackmd.io/_uploads/BJ6vluCW6.png -->
 
-![在 MINGW64 中啟動虛擬環境並執行 main.py](images/gps-run-main.png)
+![在 MINGW64 中啟動虛擬環境並執行 main.py](https://raw.githubusercontent.com/kevin6655111/notes/main/images/gps-run-main.png)
 <!-- 原圖：https://hackmd.io/_uploads/ByHPrIyGT.png -->
 
 ---
