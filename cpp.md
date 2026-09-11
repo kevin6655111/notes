@@ -55,11 +55,13 @@ gdb --version
 
 - `c_cpp_properties.json`
 
-  ![](https://hackmd.io/_uploads/SkHxnT3Z6.png)
+  ![c_cpp_properties.json 設定](images/cpp-c_cpp_properties.png)
+  <!-- 原圖：https://hackmd.io/_uploads/SkHxnT3Z6.png -->
 
 - `tasks.json`
 
-  ![](https://hackmd.io/_uploads/S1j-m0nbT.png)
+  ![tasks.json 設定](images/cpp-tasks.png)
+  <!-- 原圖：https://hackmd.io/_uploads/S1j-m0nbT.png -->
 
 ---
 

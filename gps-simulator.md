@@ -29,11 +29,25 @@
 
 1. [下載 Virtual Serial Port Driver](https://freevirtualserialports.com/)
 2. 用 **Virtual Serial Port Driver Pro** 建立一對虛擬 Serial Port（例如 COM1 ↔ COM2），模擬實體裝置。
-3. 執行 `main.py`
+3. 在 MSYS2 / MINGW64 終端機建立環境並執行 `main.py`
 
-![](https://hackmd.io/_uploads/BJ6vluCW6.png)
+```bash
+# 首次安裝
+pacman -Syu                              # 更新 MSYS2 套件
+cd msys2_setup-master/
+sh setup.sh                              # 執行專案的環境安裝腳本
+virtualenv .env_mingw64                  # 建立 Python 虛擬環境
 
-![](https://hackmd.io/_uploads/ByHPrIyGT.png)
+# 每次啟動
+source .env_mingw64/bin/activate         # 進入虛擬環境
+python src/main.py -p COM2               # -p 指定要監聽的 COM port
+```
+
+![安裝與執行步驟的指令歷程](images/gps-setup-history.png)
+<!-- 原圖：https://hackmd.io/_uploads/BJ6vluCW6.png -->
+
+![在 MINGW64 中啟動虛擬環境並執行 main.py](images/gps-run-main.png)
+<!-- 原圖：https://hackmd.io/_uploads/ByHPrIyGT.png -->
 
 ---
 
