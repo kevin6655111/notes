@@ -4,36 +4,38 @@
 
 ## 目錄
 
-- [📚 參考資料](#-參考資料)
-- [🗂️ 三個區域](#-三個區域)
-- [⚡ 常用指令](#-常用指令)
-- [🔑 公私鑰](#-公私鑰)
-- [🚀 初始化儲存庫](#-初始化儲存庫)
-- [➕ Add 暫存區](#-add-暫存區)
-- [📝 Commit 提交](#-commit-提交)
-- [🔄 Push / Fetch / Pull](#-push--fetch--pull)
-- [📦 Stash 暫存版](#-stash-暫存版)
-- [🌿 Branch 分支](#-branch-分支)
-- [🔀 Merge 合併](#-merge-合併)
-- [⚔️ 解決衝突](#-解決衝突)
-- [🏷️ Tag 標籤](#-tag-標籤)
-- [🔍 查看紀錄](#-查看紀錄)
-- [🆚 Diff 比對](#-diff-比對)
-- [🗑️ rm 刪除](#-rm-刪除)
-- [✏️ mv 更名](#-mv-更名)
-- [♻️ Restore 還原檔案](#-restore-還原檔案)
-- [⏪ Reset 重置](#-reset-重置)
-- [🩹 修改 commit 歷史紀錄](#-修改-commit-歷史紀錄)
-- [↩️ Revert 還原](#-revert-還原)
-- [🧬 Rebase](#-rebase)
-- [🍒 Cherry-pick](#-cherry-pick)
-- [🧭 符號參照](#-符號參照)
-- [🙈 .gitignore](#-gitignore)
-- [👥 多人協作專案](#-多人協作專案)
-- [🛠️ 專案流程](#-專案流程)
-- [⚙️ 設定](#-設定)
+- [📚 參考資料](#ref)
+- [🗂️ 三個區域](#areas)
+- [⚡ 常用指令](#common)
+- [🔑 公私鑰](#ssh-key)
+- [🚀 初始化儲存庫](#init)
+- [➕ Add 暫存區](#add)
+- [📝 Commit 提交](#commit)
+- [🔄 Push / Fetch / Pull](#push-fetch-pull)
+- [📦 Stash 暫存版](#stash)
+- [🌿 Branch 分支](#branch)
+- [🔀 Merge 合併](#merge)
+- [⚔️ 解決衝突](#conflict)
+- [🏷️ Tag 標籤](#tag)
+- [🔍 查看紀錄](#log)
+- [🆚 Diff 比對](#diff)
+- [🗑️ rm 刪除](#rm)
+- [✏️ mv 更名](#mv)
+- [♻️ Restore 還原檔案](#restore)
+- [⏪ Reset 重置](#reset)
+- [🩹 修改 commit 歷史紀錄](#amend)
+- [↩️ Revert 還原](#revert)
+- [🧬 Rebase](#rebase)
+- [🍒 Cherry-pick](#cherry-pick)
+- [🧭 符號參照](#refs)
+- [🙈 .gitignore](#gitignore)
+- [👥 多人協作專案](#collab)
+- [🛠️ 專案流程](#workflow)
+- [⚙️ 設定](#config)
 
 ---
+
+<a id="ref"></a>
 
 ## 📚 參考資料
 
@@ -46,6 +48,8 @@
 - [Pro Git 繁體中文版](https://git-scm.com/book/zh-tw/v2)
 
 ---
+
+<a id="areas"></a>
 
 ## 🗂️ 三個區域
 
@@ -60,6 +64,8 @@
 | 儲存庫 | `git commit` 後的歷史紀錄，存在 `.git/objects` |
 
 ---
+
+<a id="common"></a>
 
 ## ⚡ 常用指令
 
@@ -88,6 +94,8 @@ git diff                    # 尚未 add 的變更
 
 ---
 
+<a id="ssh-key"></a>
+
 ## 🔑 公私鑰
 
 **簡單版**
@@ -112,6 +120,8 @@ rm -rf ~/.ssh/*                             # 刪除現有的公私鑰（小心�
 > - ed25519 金鑰更短、更快，安全性相當於 RSA 3072 以上，是目前的建議選擇。
 
 ---
+
+<a id="init"></a>
 
 ## 🚀 初始化儲存庫
 
@@ -151,6 +161,8 @@ git push -uf origin main                  # 同上
 
 ---
 
+<a id="add"></a>
+
 ## ➕ Add 暫存區
 
 ```shell
@@ -163,6 +175,8 @@ git add *.txt          # 指定副檔名
 ```
 
 ---
+
+<a id="commit"></a>
 
 ## 📝 Commit 提交
 
@@ -212,6 +226,8 @@ feat: update <rev.1.2.230510> (#單號)  # 尾端可帶單號方便追蹤
 
 ---
 
+<a id="push-fetch-pull"></a>
+
 ## 🔄 Push / Fetch / Pull
 
 ```shell
@@ -230,6 +246,8 @@ git pull --rebase           # = git fetch + git rebase
 > `fetch` 與 `pull` 的差別：`fetch` 只是把遠端內容抓下來放在 `origin/<branch>`，工作目錄不會變動；`pull` 會直接合併進目前分支。
 
 ---
+
+<a id="stash"></a>
 
 ## 📦 Stash 暫存版
 
@@ -266,6 +284,8 @@ git cat-file -p stash       # 查看 stash 物件內容
 
 ---
 
+<a id="branch"></a>
+
 ## 🌿 Branch 分支
 
 分支都在 `.git/refs/heads` 下。
@@ -299,6 +319,8 @@ git branch feature/<branch> <SHA1>
 
 ---
 
+<a id="merge"></a>
+
 ## 🔀 Merge 合併
 
 ```shell
@@ -313,6 +335,8 @@ git merge --abort                   # 合併發生衝突時，放棄合併回到
 > - `--no-ff`：強制建立 merge commit，在歷史圖上可以清楚看到「這個功能分支在哪裡合進來」。團隊協作通常建議使用 `--no-ff`。
 
 ---
+
+<a id="conflict"></a>
 
 ## ⚔️ 解決衝突
 
@@ -356,6 +380,8 @@ git merge --abort                   # 合併發生衝突時，放棄合併回到
 
 ---
 
+<a id="tag"></a>
+
 ## 🏷️ Tag 標籤
 
 用途是用來標記某一個「版本」。分為輕量標籤（只是指標）與標示標籤（annotated，帶作者、時間、訊息，是完整的 tag 物件）。
@@ -382,6 +408,8 @@ git push origin --delete <tagName>  # 刪除遠端標籤
 > 標籤預設不會隨 `git push` 一起推上去，要另外指定標籤名稱。避免用 `--tags`，它會把本地所有標籤一次推上去。
 
 ---
+
+<a id="log"></a>
 
 ## 🔍 查看紀錄
 
@@ -453,6 +481,8 @@ git clean -fdx   # 連 .gitignore 忽略的檔案也刪（如 node_modules、bui
 
 ---
 
+<a id="diff"></a>
+
 ## 🆚 Diff 比對
 
 ```shell
@@ -473,6 +503,8 @@ git diff --name-only    # 只列出異動的檔案名稱
 
 ---
 
+<a id="rm"></a>
+
 ## 🗑️ rm 刪除
 
 ```shell
@@ -488,6 +520,8 @@ git rm 'app/*.html'
 
 ---
 
+<a id="mv"></a>
+
 ## ✏️ mv 更名
 
 ```shell
@@ -495,6 +529,8 @@ git mv <oldName> <newName>  # 更改檔案或目錄名稱（= mv + git add，Git
 ```
 
 ---
+
+<a id="restore"></a>
 
 ## ♻️ Restore 還原檔案
 
@@ -515,6 +551,8 @@ git reset HEAD <file>         # 同 git restore --staged <file>
 > 用 `git restore` 或 `git checkout <file>` 只還原單一檔案，可以避免使用 `git reset --hard` 一次把所有檔案都還原。
 
 ---
+
+<a id="reset"></a>
 
 ## ⏪ Reset 重置
 
@@ -573,6 +611,8 @@ git reset --hard HEAD@{1}
 
 ---
 
+<a id="amend"></a>
+
 ## 🩹 修改 commit 歷史紀錄
 
 修改訊息文字，或該版本忘了 add 某個檔案就 commit 了，想事後補救這次變更：
@@ -588,6 +628,8 @@ git commit --amend --no-edit   # 只補檔案，訊息維持不變
 > - 如果該 commit 已經 push 出去，amend 後需要 `git push -f`，多人協作時務必先確認。
 
 ---
+
+<a id="revert"></a>
 
 ## ↩️ Revert 還原
 
@@ -606,6 +648,8 @@ git revert --abort            # 發生衝突時放棄 revert
 ```
 
 ---
+
+<a id="rebase"></a>
 
 ## 🧬 Rebase
 
@@ -645,6 +689,8 @@ drop    刪除這個 commit
 
 ---
 
+<a id="cherry-pick"></a>
+
 ## 🍒 Cherry-pick
 
 [講義](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/21.md)
@@ -662,6 +708,8 @@ git cherry-pick --abort               # 發生衝突時放棄
 ```
 
 ---
+
+<a id="refs"></a>
 
 ## 🧭 符號參照
 
@@ -700,6 +748,8 @@ git rev-parse --short HEAD   # 顯示短 Hash
 
 ---
 
+<a id="gitignore"></a>
+
 ## 🙈 .gitignore
 
 放在專案根目錄，列出不要被追蹤的檔案。
@@ -725,6 +775,8 @@ git status --ignored         # 顯示被忽略的檔案
 
 ---
 
+<a id="collab"></a>
+
 ## 👥 多人協作專案
 
 ### 分支策略
@@ -746,6 +798,8 @@ git branch -u origin/<branch>         # 為現有本地分支設定追蹤的遠�
 
 ---
 
+<a id="workflow"></a>
+
 ## 🛠️ 專案流程
 
 ```shell
@@ -764,6 +818,8 @@ git push origin --delete feature/<newbranch>      # 刪除遠端功能分支（�
 ```
 
 ---
+
+<a id="config"></a>
 
 ## ⚙️ 設定
 
