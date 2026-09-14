@@ -9,6 +9,7 @@
 - [🔁 Gulp（整批格式化）](#gulp)
 - [🟣 CSharpier（.NET）](#csharpier)
 - [🧹 ESLint](#eslint)
+- [🆕 新專案快速上手：eslint --init 與 VS Code 套件](#quickstart)
 - [🧩 Rider 格式化 .cshtml](#rider)
 - [🚀 套用到既有專案](#apply)
 - [📚 參考資料](#ref)
@@ -336,6 +337,83 @@ module.exports = {
 - [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser?activeTab=readme)
 - [ESLint Configuring](https://eslint.org/docs/latest/use/configure/)
 - [ESLint Demo](https://eslint.org/demo)
+
+---
+
+<a id="quickstart"></a>
+
+## 🆕 新專案快速上手：eslint --init 與 VS Code 套件
+
+上一節是手寫 `.eslintrc.js`；全新專案可用 `eslint --init` 互動式產生設定檔，並搭配 VS Code 套件在存檔時即時提示。
+
+### VS Code 套件
+
+| 套件 | 功能 |
+|------|------|
+| ESLint (dbaeumer.vscode-eslint) | 編輯時即時標示語法問題 |
+| Prettier - Code formatter (esbenp.prettier-vscode) | 存檔時自動排版 |
+
+`.vscode/settings.json`
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
+
+### eslint --init
+
+```shell
+npm install -g eslint      # 全域安裝，方便直接下 eslint 指令
+npx eslint --init          # 互動式建立設定檔
+```
+
+互動問答（ESLint 8 的畫面）：
+
+```text
+? How would you like to use ESLint? ...
+  To check syntax only
+> To check syntax and find problems
+  To check syntax, find problems, and enforce code style
+
+? What type of modules does your project use? ...
+> JavaScript modules (import/export)
+  CommonJS (require/exports)
+  None of these
+
+? Which framework does your project use? ...
+> React
+  Vue.js
+  None of these
+
+? Does your project use TypeScript? > No / Yes
+
+? Where does your code run? ...
+> Browser
+  Node
+
+? What format do you want your config file to be in? ...
+  JavaScript
+  YAML
+> JSON
+
+? Would you like to install them now? No / > Yes
+
+? Which package manager do you want to use? ...
+> npm
+  yarn
+  pnpm
+```
+
+> ESLint 9 起預設改用 flat config（`eslint.config.js`），問答選項也不同；沿用本篇 `.eslintrc.js` 寫法請鎖定 ESLint 8。
+
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [ESLint + Prettier 開發 React](https://hackmd.io/@RulerChen/BJKoCskjs)
+- [VS Code Prettier 套件筆記](https://hackmd.io/@Heidi-Liu/note-prettier)
 
 ---
 
