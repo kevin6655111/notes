@@ -870,3 +870,5 @@ git config --global alias.lg "log --oneline --graph --all --decorate"
 >   * text=auto eol=lf
 >   *.bat text eol=crlf
 >   ```
+>
+> 完整說明（EOL 基礎、core.safecrlf / core.eol、.gitattributes 各屬性、常見情境與團隊規範）見 [Git 換行字元 EOL / CRLF 規範](git-eol.md)。
