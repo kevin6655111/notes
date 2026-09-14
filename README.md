@@ -7,3 +7,4 @@
 - [OpenCV / WSL GUI 顯示](opencv.md)
 - [Node.js 安裝（nvm）](nodejs.md)
 - [程式碼統一格式化](format.md)
+- [Windows 設定筆記](windows.md)
