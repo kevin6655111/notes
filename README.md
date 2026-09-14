@@ -5,3 +5,4 @@
 - [C++ 環境配置](cpp.md)
 - [GPS Simulator](gps-simulator.md)
 - [OpenCV / WSL GUI 顯示](opencv.md)
+- [Node.js 安裝（nvm）](nodejs.md)
