@@ -219,7 +219,7 @@ UTF-8、UTF-16、UTF-32 是同一組碼點的不同二進位表示法。從任�
 | BE | `4E 2D` |
 | LE | `2D 4E` |
 
-![大尾序與小尾序對照](images/encoding-endian.png)
+![大尾序與小尾序對照](https://raw.githubusercontent.com/kevin6655111/notes/main/images/encoding-endian.png)
 
 大尾序把高位位元組 `4E` 放在低位址 `0x10001`；小尾序則把低位位元組 `2D` 放在低位址，順序顛倒過來。
 
@@ -267,7 +267,7 @@ Unicode 中有一個「零寬度非換行空格」（Zero Width No-Break Space�
 
 ## 🔄 文字編解碼流程
 
-![文字編解碼流程](images/encoding-flow.png)
+![文字編解碼流程](https://raw.githubusercontent.com/kevin6655111/notes/main/images/encoding-flow.png)
 
 程式裡拿到的字串是碼點層級的抽象（圖中的 Unicode），真正要落到硬碟或送上網路時，必須先**編碼**成位元組串；讀回來時再依相同規則**解碼**還原。
 

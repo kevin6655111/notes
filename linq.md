@@ -520,4 +520,4 @@ name = string.Join(",", name.Split(',').Reverse()).Trim();
 
 - [System.Linq 命名空間](https://learn.microsoft.com/zh-tw/dotnet/api/system.linq)
 - [標準查詢運算子概觀](https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/standard-query-operators-overview)
-- [101 LINQ Samples](https://learn.microsoft.com/en-us/samples/dotnet/try-samples/101-linq-samples/)
+- [LINQ 總覽](https://learn.microsoft.com/dotnet/csharp/linq/)

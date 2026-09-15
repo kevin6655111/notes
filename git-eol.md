@@ -341,6 +341,6 @@ git commit -m "Introduce end-of-line normalization"
 - [Git 在 Windows 平台處理斷行字元 (CRLF) 的注意事項](https://blog.miniasp.com/post/2013/09/15/Git-for-Windows-Line-Ending-Conversion-Notes)
 - [Git gitattributes Document](https://git-scm.com/docs/gitattributes)
 - [Git config Document](https://git-scm.com/docs/git-config)
-- [理解 CRLF，LF](https://iter01.com/149469.html)
+- [Wikipedia: Newline](https://en.wikipedia.org/wiki/Newline)
 - [Useful .gitattributes Templates](https://github.com/alexkaratarakis/gitattributes)
 - [處理 Git 斷行字元的問題](https://titangene.github.io/article/git-auto-crlf.html)

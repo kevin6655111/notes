@@ -412,7 +412,6 @@ npx eslint --init          # 互動式建立設定檔
 > ESLint 9 起預設改用 flat config（`eslint.config.js`），問答選項也不同；沿用本篇 `.eslintrc.js` 寫法請鎖定 ESLint 8。
 
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-- [ESLint + Prettier 開發 React](https://hackmd.io/@RulerChen/BJKoCskjs)
 - [VS Code Prettier 套件筆記](https://hackmd.io/@Heidi-Liu/note-prettier)
 
 ---

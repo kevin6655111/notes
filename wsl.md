@@ -51,7 +51,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - 適用於 Linux 的 Windows 子系統
 - 虛擬機器平台（WSL 2 需要）
 
-![Windows 功能中要勾選的兩個項目](images/wsl-windows-features.png)
+![Windows 功能中要勾選的兩個項目](https://raw.githubusercontent.com/kevin6655111/notes/main/images/wsl-windows-features.png)
 
 重開機後確認：
 
@@ -95,7 +95,7 @@ wsl --set-default-version 2            # 之後新裝的都用 WSL2
 
 2. **BIOS 的虛擬化要開啟**。確認方式是工作管理員 → 效能 → CPU，看「虛擬化」是否顯示已啟用。沒有的話要進 BIOS 打開，Intel 叫 VT-x、AMD 叫 SVM。
 
-   ![工作管理員顯示虛擬化已啟用](images/wsl-cpu-virtualization.png)
+   ![工作管理員顯示虛擬化已啟用](https://raw.githubusercontent.com/kevin6655111/notes/main/images/wsl-cpu-virtualization.png)
 
 3. **舊版 Windows 需要手動裝核心更新包**，從 [Linux kernel update package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) 下載。現在用 `wsl --update` 就好。
 
@@ -103,7 +103,7 @@ wsl --set-default-version 2            # 之後新裝的都用 WSL2
 >
 > Hyper-V 在 Windows 功能裡是另一個獨立項目，位置如下。專業版以上才有，跑其他虛擬機時才需要開。
 >
-> ![Windows 功能中的 Hyper-V 項目](images/wsl-hyper-v.png)
+> ![Windows 功能中的 Hyper-V 項目](https://raw.githubusercontent.com/kevin6655111/notes/main/images/wsl-hyper-v.png)
 
 ### 磁碟空間自動回收
 
@@ -126,7 +126,7 @@ wsl --manage Ubuntu-22.04 --set-sparse true
 | Linux 讀 Windows | `/mnt/c`、`/mnt/d`，對應各個磁碟機 |
 | Windows 讀 Linux | 檔案總管輸入 `\\wsl.localhost\Ubuntu-22.04` |
 
-![在檔案總管輸入路徑存取 WSL 檔案系統](images/wsl-explorer-path.png)
+![在檔案總管輸入路徑存取 WSL 檔案系統](https://raw.githubusercontent.com/kevin6655111/notes/main/images/wsl-explorer-path.png)
 
 > 舊的 `\\wsl$` 寫法仍可用（上圖即是），但官方現在建議 `\\wsl.localhost`。
 
@@ -215,7 +215,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 `ZSH_THEME` 就在 `~/.zshrc` 上方，預設值是 `robbyrussell`，把引號裡的值換掉即可。
 
-![zshrc 中的 ZSH_THEME 設定位置](images/zsh-theme.png)
+![zshrc 中的 ZSH_THEME 設定位置](https://raw.githubusercontent.com/kevin6655111/notes/main/images/zsh-theme.png)
 
 ### 安裝字型
 
@@ -286,7 +286,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 ```
 
-![zshrc 中 plugins 陣列與 fzf 的兩行 source](images/zsh-plugins-fzf.png)
+![zshrc 中 plugins 陣列與 fzf 的兩行 source](https://raw.githubusercontent.com/kevin6655111/notes/main/images/zsh-plugins-fzf.png)
 
 | 快捷鍵 | 功能 |
 |--------|------|
@@ -357,7 +357,7 @@ sudo visudo
 
 要給予完整的 sudo 權限則是加在 `User privilege specification` 區塊，格式與 `root` 那行相同：
 
-![sudoers 的 User privilege specification 區塊](images/sudoers-user.png)
+![sudoers 的 User privilege specification 區塊](https://raw.githubusercontent.com/kevin6655111/notes/main/images/sudoers-user.png)
 
 > ⚠️ **修改 sudoers 一律用 `visudo`，不要直接編輯 `/etc/sudoers`。** `visudo` 會在存檔前檢查語法，寫錯會擋下來讓你修正。直接編輯寫壞的話，sudo 會完全無法使用，而你也沒有權限改回來。
 >

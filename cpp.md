@@ -56,12 +56,10 @@ gdb --version
 - `c_cpp_properties.json`
 
   ![c_cpp_properties.json 設定](https://raw.githubusercontent.com/kevin6655111/notes/main/images/cpp-c_cpp_properties.png)
-  <!-- 原圖：https://hackmd.io/_uploads/SkHxnT3Z6.png -->
 
 - `tasks.json`
 
   ![tasks.json 設定](https://raw.githubusercontent.com/kevin6655111/notes/main/images/cpp-tasks.png)
-  <!-- 原圖：https://hackmd.io/_uploads/S1j-m0nbT.png -->
 
 ---
 

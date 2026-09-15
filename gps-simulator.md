@@ -18,7 +18,7 @@
 ## 📚 參考資料
 
 - [NMEA 0183 格式說明 - NCU msplab](https://hackmd.io/@NCUmsplab/Bk6BsFP3D)
-- [GPS NMEA 解析 - CSDN](https://blog.csdn.net/qq_32478489/article/details/107149673)
+- [NMEA 語句格式參考 - gpsd](https://gpsd.gitlab.io/gpsd/NMEA.html)
 - [架設 OpenStreetMap Tile Server（Ubuntu 20.04）](https://www.linuxbabe.com/ubuntu/openstreetmap-tile-server-ubuntu-20-04-osm)
 
 ---
@@ -44,10 +44,8 @@ python src/main.py -p COM2               # -p 指定要監聽的 COM port
 ```
 
 ![安裝與執行步驟的指令歷程](https://raw.githubusercontent.com/kevin6655111/notes/main/images/gps-setup-history.png)
-<!-- 原圖：https://hackmd.io/_uploads/BJ6vluCW6.png -->
 
 ![在 MINGW64 中啟動虛擬環境並執行 main.py](https://raw.githubusercontent.com/kevin6655111/notes/main/images/gps-run-main.png)
-<!-- 原圖：https://hackmd.io/_uploads/ByHPrIyGT.png -->
 
 ---
 

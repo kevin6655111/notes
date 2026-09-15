@@ -202,7 +202,7 @@ out body;
 
 - [QGIS 官方下載](https://qgis.org/download/)
 - [QGIS Ubuntu 安裝說明](https://qgis.org/resources/installation-guide/#debian--ubuntu)
-- [QuickOSM 文件](https://docs.3liz.org/QuickOSM/)
+- [QuickOSM 原始碼與說明](https://github.com/3liz/QuickOSM)
 - [Overpass QL 語法](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL)
 - [Overpass Turbo](https://overpass-turbo.eu/)
 - [OSM Wiki：Key:highway](https://wiki.openstreetmap.org/wiki/Key:highway)
