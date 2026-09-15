@@ -20,6 +20,11 @@
 
 安裝方式：側邊欄的 Extensions 搜尋名稱，或用命令列 `code --install-extension <識別碼>`。
 
+### AI 輔助
+
+- [x] **Windsurf Plugin**（前身為 Codeium）— `codeium.codeium`　行內補全與 AI 對話，個人使用免費
+- [x] **Claude Code** — `anthropic.claude-code`　在編輯器內操作 Claude Code，可讀寫檔案與執行指令
+
 ### Git
 
 - [x] **Git Graph** — `mhutchie.git-graph`　圖形化的分支與 commit 樹，可直接操作
@@ -33,17 +38,35 @@
 - [x] **ES7+ React/Redux/React-Native snippets** — `dsznajder.es7-react-js-snippets`　輸入縮寫按 Enter 展開樣板，例如 `rafce`
 - [x] **Live Server** — `ritwickdey.liveserver`　靜態頁面起一個有熱重載的本機伺服器
 
+### 測試
+
+VS Code 內建**測試面板**（側邊欄的燒杯圖示），下面這些套件都是把測試結果接進那個面板，裝了就能在程式碼行號旁直接按執行與除錯。
+
+- [x] **Playwright Test for VSCode** — `ms-playwright.playwright`　端對端測試，可錄製操作產生程式碼
+- [ ] **Vitest** — `vitest.explorer`　Vite 生態的單元測試，官方出品
+- [ ] **Jest** — `orta.vscode-jest`　專案用 Jest 時裝這個
+- [ ] **REST Client** — `humao.rest-client`　用 `.http` 純文字檔發 API 請求，檔案可進版控
+
+| 語言 / 框架 | 怎麼跑測試 |
+|-------------|------------|
+| JavaScript / TypeScript | 裝 Vitest 或 Jest 套件，看專案用哪個 |
+| 端對端 | Playwright |
+| Python | 不用另外裝，`ms-python.python` 內建 pytest 與 unittest 探索 |
+| C# | 不用另外裝，C# Dev Kit 內建測試總管 |
+| C / C++ | CMake Tools 已整合 CTest |
+
+> **API 測試建議用 REST Client 而不是 Postman 這類 GUI 工具。** 請求寫在 `.http` 檔裡，可以跟程式碼一起進版控、一起做 code review，換機器也不用重新匯入。
+
+Playwright 的使用見 [Playwright + VS Code UI 測試](playwright.md)。
+
 ### 程式規範檢查
 
 - [x] **ESLint** — `dbaeumer.vscode-eslint`　JavaScript / TypeScript 語法檢查
 - [x] **Prettier** — `esbenp.prettier-vscode`　程式碼排版
 - [x] **Code Spell Checker** — `streetsidesoftware.code-spell-checker`　英文拼字檢查
 - [x] **Error Lens** — `usernamehw.errorlens`　把錯誤與警告直接顯示在該行行尾
-- [ ] ~~TSLint Vue~~　**已停止維護**，見下方說明
 
 ESLint 與 Prettier 的專案設定見 [程式碼統一格式化](format.md)。
-
-> **TSLint 已經停止維護**，官方在 2019 年就建議改用 `typescript-eslint`。ESLint 搭配 `@typescript-eslint/parser` 就能檢查 TypeScript，不需要額外裝 TSLint 相關套件。
 
 ### 語言支援
 
@@ -70,20 +93,12 @@ C/C++ 的專案設定見 [C++ 環境配置](cpp.md)。
 >
 > 這些不需要也不該手動移除，砍掉主套件會一起帶走。
 
-### AI 輔助
+### 其他
 
-- [x] **Windsurf Plugin**（前身為 Codeium）— `codeium.codeium`　行內補全與 AI 對話，個人使用免費
-- [x] **Claude Code** — `anthropic.claude-code`　在編輯器內操作 Claude Code，可讀寫檔案與執行指令
-
-### 測試與其他
-
-- [x] **Playwright Test for VSCode** — `ms-playwright.playwright`　在編輯器內執行與錄製測試
 - [x] **Remote - WSL** — `ms-vscode-remote.remote-wsl`　連進 WSL 開發
 - [x] **Dev Containers** — `ms-vscode-remote.remote-containers`　在容器內開發
 - [x] **Partial Diff** — `ryu1kn.partial-diff`　比對選取的兩段文字
 - [x] **繁體中文語言包** — `ms-ceintl.vscode-language-pack-zh-hant`　介面中文化
-
-Playwright 的使用見 [Playwright + VS Code UI 測試](playwright.md)。
 
 ---
 
