@@ -80,7 +80,7 @@
 
 ### 圖資與影像
 
-- [x] **QGIS**　見 [QGIS 取得 OSM 道路資料](qgis.md)
+- [x] **QGIS**　見 [QGIS 道路資料處理](qgis.md)
 - [x] **OpenStreetMap**、**Overpass API**
 - [x] **Nominatim**　地理編碼
 - [x] **OSRM**　路徑規劃

@@ -101,7 +101,7 @@ yarn build          # 編譯與壓縮，產出 build/
 | `mapillary-js` | 街景服務 |
 | `wgsl_reflect` | WGSL 著色器解析，deck.gl 的相依 |
 
-座標系統的說明見 [QGIS 取得 OSM 道路資料](qgis.md)。
+座標系統的說明見 [QGIS 道路資料處理](qgis.md)。
 
 ---
 
