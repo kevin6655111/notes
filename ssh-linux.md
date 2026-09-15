@@ -1,6 +1,8 @@
 # Linux 安裝 OpenSSH Server
 
 > 讓其他電腦能透過 SSH 連進這台 Linux 主機。適用 Ubuntu / Debian / CentOS / RHEL 等主流發行版。
+>
+> Windows 主機的做法見 [Windows 安裝 OpenSSH Server](ssh-windows.md)。
 
 ## 目錄
 
