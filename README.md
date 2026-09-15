@@ -12,6 +12,7 @@
 - [VS Code 設定與擴充套件](vscode.md)
 - [程式碼統一格式化](format.md)
 - [LINQ](linq.md)
+- [WSL + Ubuntu](wsl.md)
 - [Windows 設定筆記](windows.md)
 - [Linux 安裝 OpenSSH Server](ssh-linux.md)
 - [Windows 安裝 OpenSSH Server](ssh-windows.md)
