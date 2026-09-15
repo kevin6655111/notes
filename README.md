@@ -2,7 +2,7 @@
 
 - [Git 使用筆記](git.md)
 - [Git 換行字元 EOL / CRLF 規範](git-eol.md)
-- [文字編碼（ASCII / Unicode / UTF-8 / BOM）](encoding.md)
+- [文字編碼](encoding.md)
 - [C++ 環境配置](cpp.md)
 - [GPS Simulator](gps-simulator.md)
 - [OpenCV / WSL GUI 顯示](opencv.md)

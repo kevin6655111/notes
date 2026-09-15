@@ -1,4 +1,4 @@
-# 文字編碼（ASCII / Unicode / UTF-8 / BOM）
+# 文字編碼
 
 > 從 bit 到字元的對應關係，以及 UTF-8、UTF-16、UTF-32 的差異、位元組順序與 BOM。最後整理 Big5 轉 UTF-8 時的亂碼問題。
 
