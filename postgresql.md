@@ -6,7 +6,7 @@
 - Migration：`webSystem/my-app/server/src/migrations/`
 - 資料庫容器：`postgres-db/`
 
-> 早期 HackMD 筆記整理的舊版結構（大寫複數表名，與現行不符）保留在 [postgresql-legacy-schema.sql](postgresql-legacy-schema.sql)，僅供對照，不要拿去執行。
+> 舊版表名的 DDL 保留在 [postgresql-schema.sql](postgresql-schema.sql)，已裁剪成現行 entity 仍存在的 38 張表。表名是舊式大寫複數，與現行的小寫單數對不上，僅供對照。
 
 ## 目錄
 
