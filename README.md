@@ -11,4 +11,5 @@
 - [Windows 設定筆記](windows.md)
 - [QGIS 取得 OSM 道路資料](qgis.md)
 - [Playwright + VS Code UI 測試](playwright.md)
+- [GitLab CI/CD](gitlab-cicd.md)
 - [PostgreSQL 筆記（道路巡查系統 web_server）](postgresql.md)
