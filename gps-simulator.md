@@ -186,7 +186,7 @@ cat /dev/ttyUSB0
 系統目錄的擁有者是 root，一般使用者沒有寫入權限。把目錄擁有者改成自己即可：
 
 ```bash
-sudo chown -R kevin:kevin /usr/local/include/opencv4/opencv2/
+sudo chown -R $USER:$USER /usr/local/include/opencv4/opencv2/
 ```
 
 > - `-R` 遞迴套用到所有子目錄與檔案。

@@ -1,5 +1,6 @@
 # notes
 
+- [開發環境建置清單](setup.md)
 - [技術能力盤點](skills.md)
 - [Git 使用筆記](git.md)
 - [Git 換行字元 EOL / CRLF 規範](git-eol.md)

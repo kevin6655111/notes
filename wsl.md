@@ -408,6 +408,29 @@ netstat -ano | findstr :3008
 taskkill /F /PID <PID>
 ```
 
+### 掛載 Windows 共享資料夾
+
+```shell
+sudo apt install -y cifs-utils
+
+sudo mount -t cifs -o credentials=/etc/cifs-credentials,rw,file_mode=0777,dir_mode=0777,nounix,sec=ntlmssp,vers=3.0,iocharset=utf8 \
+  //<伺服器IP>/<分享名稱> /mnt/<掛載點>
+
+sudo umount /mnt/<掛載點>
+```
+
+帳密寫在指令裡會留在 shell 歷史，改用 credentials 檔：
+
+```shell
+sudo tee /etc/cifs-credentials > /dev/null <<'EOF'
+username=<帳號>
+password=<密碼>
+EOF
+sudo chmod 600 /etc/cifs-credentials
+```
+
+> `wsl --shutdown` 或關閉 WSL 都會斷開掛載，重開後要重新 mount。要免密碼執行 mount 的設定見[使用者與權限](#user)。
+
 ---
 
 <a id="python"></a>
