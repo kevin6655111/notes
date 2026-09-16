@@ -1,12 +1,11 @@
 # 環境建置清單
 
-> 新機器要裝的東西。上半部是每台都會裝的，分隔線以下是視需要再裝。勾選狀態是目前這台的實際情形。
+> 新機器要裝的東西。上半部是每台都會裝的，分隔線以下是視需要再裝。打勾狀態是目前這台的實際情形。
 
 ## 目錄
 
 - [✅ 常用](#common)
 - [🔧 其他](#others)
-- [🔐 授權金鑰](#license)
 
 ---
 
@@ -14,28 +13,26 @@
 
 ## ✅ 常用
 
-- [x] **Git**　→ [Git 使用筆記](git.md)、[換行字元 EOL / CRLF 規範](git-eol.md)
-  Windows 裝 Git for Windows，會一併帶 Git Bash
-- [x] **WSL + Ubuntu**　→ [WSL + Ubuntu](wsl.md)
-  `wsl --install -d Ubuntu`，含 zsh 與終端機環境設定
-- [x] **Docker**　開發機用 Docker Desktop，記得開 WSL integration
-- [x] **Node.js**　→ [Node.js 安裝（nvm）](nodejs.md)
-  用 nvm 管版本，不要用 apt 直接裝
-- [x] **yarn**　`npm i -g yarn`
-- [x] **VS Code**　→ [VS Code 設定與擴充套件](vscode.md)
-  擴充套件清單與設定都在那篇
-- [x] **Visual Studio 2022**　.NET 開發
-- [x] **C / C++ 工具鏈**　→ [C++ 環境配置](cpp.md)
-- [x] **PostgreSQL client**　`psql` 連線與備份用，不需要裝伺服器
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ✅ | **Git**　→ [Git 使用筆記](git.md)、[換行字元 EOL / CRLF 規範](git-eol.md) | Windows 裝 Git for Windows，會一併帶 Git Bash |
 
-```shell
-# 驗證
-git --version
-node -v && yarn -v
-docker --version
-psql --version
-code --version
-```
+**WSL 開發環境**
+
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ✅ | **WSL + Ubuntu**　→ [WSL + Ubuntu](wsl.md) | `wsl --install -d Ubuntu`，含 zsh 與終端機環境設定 |
+| ✅ | **Docker** | 開發機用 Docker Desktop，記得開 WSL integration |
+| ✅ | **Node.js**　→ [Node.js 安裝（nvm）](nodejs.md) | 用 nvm 管版本，不要用 apt 直接裝 |
+| ✅ | **yarn** | `npm i -g yarn` |
+| ✅ | **VS Code**　→ [VS Code 設定與擴充套件](vscode.md) | 擴充套件清單與設定都在那篇 |
+
+**其他**
+
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ✅ | **PostgreSQL client** | `psql` 連線與備份用，不需要裝伺服器 |
+| ⬜ | **[pgAdmin](https://www.pgadmin.org/)** | 圖形介面管理工具，需要視覺化操作時再裝，日常查詢用 `psql` 就夠 |
 
 ---
 
@@ -45,34 +42,39 @@ code --version
 
 視需要再裝。
 
-- [x] **7-Zip**　壓縮解壓
-- [ ] **Bandizip**　與 7-Zip 擇一
-- [ ] **Everything**　全碟檔名即時搜尋，比內建快很多
-- [ ] **Chocolatey**　Windows 套件管理，可批次安裝上面這些
-- [ ] **LINQPad**　C# 片段測試與 LINQ 查詢　→ [LINQ](linq.md)
-- [ ] **QGIS**　處理道路圖資　→ [QGIS 道路資料處理](qgis.md)
-- [ ] **iTop Easy Desktop**　桌面圖示整理
-- [ ] **GitHub Copilot**　需訂閱，替代方案見 [VS Code 的 AI 輔助](vscode.md#extensions)
+**壓縮**（擇一即可）
 
-Chocolatey 裝好後其餘可以一行帶過：
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ✅ | **[7-Zip](https://www.7-zip.org/)** | 開源免費，壓縮解壓 |
+| ⬜ | **[Bandizip](https://www.bandisoft.com/bandizip/)** | 介面較新，個人使用免費 |
 
-```powershell
-choco install 7zip everything git docker-desktop vscode -y
-```
+**檔案搜尋**（擇一即可）
 
----
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ⬜ | **[Everything](https://www.voidtools.com/)** | 以檔名索引 NTFS，全碟即時搜尋最快 |
+| ⬜ | **[Quick Search](https://www.glarysoft.com/quick-search/)** | Glarysoft 出品，介面更直覺，內建檔案類型篩選 |
 
-<a id="license"></a>
+**開發工具**
 
-## 🔐 授權金鑰
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ✅ | **Visual Studio 2022** | .NET 開發 |
+| ✅ | **C / C++ 工具鏈**　→ [C++ 環境配置](cpp.md) | |
+| ⬜ | **[LINQPad](https://www.linqpad.net/)**　→ [LINQ](linq.md) | C# 片段測試與 LINQ 查詢 |
+| ⬜ | **QGIS**　→ [QGIS 道路資料處理](qgis.md) | 處理道路圖資 |
+| ⬜ | **[draw.io](https://www.drawio.com/)** | 流程圖、架構圖，免費且可存成本機檔案 |
 
-**金鑰不要寫進這個倉庫。** 這是公開的 GitHub repo，貼上去的序號會被爬蟲收走而失效，也可能牴觸授權條款。
+**桌面工具**
 
-放在密碼管理器、公司的授權管理系統，或加密的本機檔案。筆記裡只記錄去哪裡找：
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ⬜ | **iTop Easy Desktop** | 桌面圖示整理 |
 
-```text
-Visual Studio 2022：公司授權，向 IT 申請
-LINQPad：個人購買，金鑰存在密碼管理器
-```
+**遠端軟體**（擇一即可）
 
-> Visual Studio 有免費的 **Community** 版，個人開發與小型團隊適用，符合授權條件就不需要金鑰。
+| | 名稱 | 用途 |
+|:-:|------|------|
+| ⬜ | **[AnyDesk](https://anydesk.com/)** | 連線快、介面單純，免費版可商用但有連線次數限制 |
+| ⬜ | **[RustDesk](https://rustdesk.com/)** | 開源，可自架 server，注重隱私或要免費商用選這個 |
