@@ -27,7 +27,7 @@
 - [x] **VS Code**　→ [VS Code 設定與擴充套件](vscode.md)
   擴充套件清單與設定都在那篇
 
-**其他**
+**資料庫工具**
 
 - [x] **PostgreSQL client**　`psql` 連線與備份用，不需要裝伺服器
 - [ ] **[pgAdmin](https://www.pgadmin.org/)**　圖形介面管理工具，需要視覺化操作時再裝，日常查詢用 `psql` 就夠
@@ -50,12 +50,25 @@
 - [ ] **[Everything](https://www.voidtools.com/)**　以檔名索引 NTFS，全碟即時搜尋最快
 - [ ] **[Quick Search](https://www.glarysoft.com/quick-search/)**　Glarysoft 出品，介面更直覺，內建檔案類型篩選
 
-**開發工具**
+**.NET / C#**
 
 - [x] **Visual Studio 2022**　.NET 開發
-- [x] **C / C++ 工具鏈**　→ [C++ 環境配置](cpp.md)
 - [ ] **[LINQPad](https://www.linqpad.net/)**　C# 片段測試與 LINQ 查詢　→ [LINQ](linq.md)
+
+**C / C++**
+
+- [x] **C / C++ 工具鏈**　→ [C++ 環境配置](cpp.md)
+
+**Python**
+
+- [ ] **[Anaconda3](https://www.anaconda.com/download)**　Python 環境與套件管理，需要跑資料科學/AI 相關腳本時裝
+
+**圖資**
+
 - [ ] **QGIS**　處理道路圖資　→ [QGIS 道路資料處理](qgis.md)
+
+**繪圖 / 圖表**
+
 - [ ] **[draw.io](https://www.drawio.com/)**　流程圖、架構圖，免費且可存成本機檔案
 
 **桌面工具**

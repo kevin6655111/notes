@@ -279,31 +279,33 @@ variables:
 | `rev.*` | development | 測試機 | 自動跑 |
 | `v.*` | main | 正式機 | 手動按按鈕 |
 
+> feature 分支怎麼建立、commit、合併回 development 的細節見 [Git 使用筆記的專案流程](git.md#workflow)。這裡接著那個流程之後，講合併進 development／main 之後怎麼打 tag 觸發部署。
+
 ### 階段一：發測試版
 
 ```shell
 git switch development
 git pull
-git merge --no-ff feature/xxx
-git push origin development        # 不會觸發 pipeline
+git merge feature/xxx --no-ff      # 合併，保留分支歷史
 
-git tag rev.2.0.260827
-git push origin rev.2.0.260827     # 這一步才部署
+git tag -a rev.2.0.260827 -m "release rev.2.0.260827"
+git push origin development rev.2.0.260827   # 一次推送分支與標籤，後者才觸發部署
 ```
 
-### 階段二：升到正式
+### 階段二：升到正式版
 
 ```shell
 git switch main
 git pull
-git merge --no-ff development
-git push origin main               # 同樣不會觸發
+git merge development --no-ff
 
-git tag v.2.0.260827
-git push origin v.2.0.260827       # pipeline 建立，等你按按鈕
+git tag -a v.2.0.260827 -m "release v.2.0.260827"
+git push origin main v.2.0.260827  # 一次推送分支與標籤，等你按按鈕
 ```
 
 好處是 main 的歷史就是上線過的版本。代價是多一次 merge 與一次 tag。
+
+> **一律用 `git tag -a`（annotated tag），不要用不帶參數的輕量 tag。** 兩者對 `rules: - if: $CI_COMMIT_TAG =~ /^v\./` 這種比對沒有差別，但輕量 tag 只是一個指向 commit 的指標，不記錄是誰、何時、為什麼打的；annotated tag 是一個完整物件，帶 tagger、時間戳與訊息，`git show <tag>` 才看得到這些資訊，`git describe` 等工具預設也只認 annotated tag。發版這種要事後追溯的操作，補上 `-m` 訊息幾乎零成本，出事時才不用回頭問「這個 tag 是誰打的、對應哪次改動」。
 
 > 正式機部署的 commit SHA 跟測試機驗過的不是同一個，多了 main 的 merge commit。main 沒有其他變更時檔案內容完全相同，實務上沒差。但若有人直接對 main 推 hotfix，那個 merge 會混入沒被驗過的東西，這是流程紀律，CI 擋不了。
 
