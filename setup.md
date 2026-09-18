@@ -79,3 +79,7 @@
 
 - [ ] **[AnyDesk](https://anydesk.com/)**　連線快、介面單純，免費版可商用但有連線次數限制
 - [ ] **[RustDesk](https://rustdesk.com/)**　開源，可自架 server，注重隱私或要免費商用選這個
+
+**其它**
+- [ ] **Revo Uninstaller**
+- [ ] **Tailscale**
